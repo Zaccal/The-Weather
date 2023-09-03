@@ -1,20 +1,16 @@
-import { TypeReactElement } from "@/types/ReactElement.type"
 import Container from "../ui/Container";
 import Sidebar from "@/components/Layout/Sidebar/Sidebar";
+import { Outlet } from "react-router-dom";
 
-interface ILayout {
-    children: TypeReactElement; 
-}
-
-const Layout = ({children}: ILayout) => {  
+const Layout = () => {  
   return (
     <Container className="h-screen py-5">
         <div className="h-full grid gap-5 grid-cols-sidebar/content">
-          <div className="">
+          <div>
             <Sidebar />
           </div>
-          <div className="">
-            {children}
+          <div>
+            <Outlet />
           </div>
         </div>
     </Container>

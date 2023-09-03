@@ -12,13 +12,13 @@ export const SidebarListItemData: ISidebarListItemData[] = [
     {
         title: 'Weather',
         icon: CloudSun,
-        path: '/Weather',
+        path: '/',
         id: 1
     },
     {
         title: 'Cities',
         icon: List,
-        path: '/Cities',
+        path: '/Cites',
         id: 2
     },
     {
