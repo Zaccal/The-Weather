@@ -2,7 +2,8 @@ import { ISettings, TypeTheme } from "@/types/Settings.interface";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 const initialState: ISettings = {
-    theme: 'system'
+    theme: 'system',
+    location: '',
 }
 
 const settings = createSlice({
@@ -12,6 +13,9 @@ const settings = createSlice({
         changeTheme: (state, actions: PayloadAction<TypeTheme>) => {
             const newTheme = actions.payload
             state.theme = newTheme
+        },
+        changeLocation: (state, actions: PayloadAction<string>) => {
+            state.location = actions.payload
         }
     }
 })

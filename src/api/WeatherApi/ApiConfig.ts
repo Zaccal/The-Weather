@@ -3,5 +3,5 @@ export const ApiConfig = {
     searchUrl: 'search.json',
     currentUrl: 'current.json',
     forecastUrl: 'forecast.json',
-    key: '',
+    key: 'ec47a59149e64663953133843232808',
 }

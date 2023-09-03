@@ -15,11 +15,12 @@ module.exports = {
         "2xl": "1400px",
       },
     },
-    gridTemplateColumns: {
-      'sidebar/content': '87px, 3fr'
-    },
     extend: {
+      gridTemplateColumns: {
+        'sidebar/content': '87px, 3fr'
+      },
       colors: {
+        main: '#f9f9f9',
         mainDark: '#202b3b',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

@@ -7,11 +7,11 @@ const axiosWeather = axios.create({
     headers: {
         "Content-Type": 'json/application',
         Accept: 'json/application',
-        Authorization: ApiConfig.key
+        Authorization: ApiConfig.key,
     },
     params: {
         key: ApiConfig.key,
-    }
+    },
 })
 
 export class ApiClient {
