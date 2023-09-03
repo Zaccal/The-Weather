@@ -1,7 +1,7 @@
 import { Cloud, Settings } from 'lucide-react';
 import Logo from './Logo';
-import List from '@/components/List/List';
-import ListItem from '@/components/List/ListItem';
+import List from '@/components/ui/List';
+import ListItem from '@/components/ui/ListItem';
 import { SidebarListItemData } from './SidebarListItemData';
 import { Sheet, SheetTrigger } from '@/components/ui/sheet'
 import SettingsSheetContent from './SettingsSheetContent/SettingsSheetContent';

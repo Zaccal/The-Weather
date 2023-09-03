@@ -1,11 +1,10 @@
-import Error from "./pages/Error/Error";
-import Home from "./pages/Home/Home";
-import SelectLocation from "./pages/SelectLocation/SelectLocation";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./Router/Router";
 
 function App() {    
   return (
     <>
-      <Home />
+      <RouterProvider router={router} />
     </>
   );
 }
