@@ -1,5 +1,5 @@
 import { LucideIcon } from 'lucide-react/dist/lucide-react'
-import { CloudSun, List, Map, Settings } from 'lucide-react'
+import { CloudSun, List, Map } from 'lucide-react'
 
 interface ISidebarListItemData {
     title: string,
@@ -27,10 +27,4 @@ export const SidebarListItemData: ISidebarListItemData[] = [
         path: '/Map',
         id: 3
     },
-    {
-        title: 'Settings',
-        icon: Settings,
-        path: '/Settings',
-        id: 4
-    }
 ]

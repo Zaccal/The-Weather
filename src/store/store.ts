@@ -16,6 +16,7 @@ const persistConfig = {
     key: 'root',
     storage,
     whitelist: ['settings'],
+    blacklist: ['searchedWeatherData']
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducers);

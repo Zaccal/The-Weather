@@ -2,9 +2,11 @@ import { useMemo } from 'react'
 import { actions as settingsActions } from '@/store/slices/Settings/Settings.slice'
 import { useDispatch } from 'react-redux'
 import { bindActionCreators } from '@reduxjs/toolkit'
+import * as WeatherActions from '@/store/slices/Weather/Weather.actions'
 
 const rootActions = {
-    ...settingsActions
+    ...settingsActions,
+    ...WeatherActions,
 }
 
 const useActions = () => {
