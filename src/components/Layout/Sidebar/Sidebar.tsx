@@ -1,32 +1,40 @@
-import { Cloud } from 'lucide-react';
+import { Cloud, Settings } from 'lucide-react';
 import Logo from './Logo';
 import List from '@/components/List/List';
 import ListItem from '@/components/List/ListItem';
 import { SidebarListItemData } from './SidebarListItemData';
+import { Sheet, SheetTrigger } from '@/components/ui/sheet'
+import SettingsSheetContent from './SettingsSheetContent/SettingsSheetContent';
 
 const Sidebar = () => {
     return (
-        <div className="dark:bg-mainDark w-full h-full rounded-lg px-3 py-3">
-            <Logo className="mb-10">
-                <Cloud />
-            </Logo>
-            <nav>
-                <List>
-                    {SidebarListItemData.map(listItemData => {
-                        return (
-                            <ListItem
-                                key={listItemData.id}
-                                icon={<listItemData.icon />}
-                                path={listItemData.path}
-                                active={false}
-                            >
-                                {listItemData.title}
+        <Sheet>
+            <div className="dark:bg-mainDark bg-white shadow-lg w-full h-full rounded-lg px-3 py-3">
+                <Logo className="mb-10"><Cloud /></Logo>
+                <nav>
+                    <List>
+                        {SidebarListItemData.map(listItemData => {
+                            return (
+                                <ListItem
+                                    key={listItemData.id}
+                                    icon={<listItemData.icon />}
+                                    path={listItemData.path}
+                                    active={false}
+                                >
+                                    {listItemData.title}
+                                </ListItem>
+                            );
+                        })}
+                        <SheetTrigger className='mx-auto block'>
+                            <ListItem icon={<Settings />}>
+                                Settings
                             </ListItem>
-                        );
-                    })}
-                </List>
-            </nav>
-        </div>
+                        </SheetTrigger>
+                    </List>
+                </nav>
+            </div>
+           <SettingsSheetContent />
+        </Sheet>
     );
 };
 
