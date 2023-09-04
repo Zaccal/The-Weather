@@ -1,15 +1,9 @@
-import { SerializedError, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { fetchWeatherSearch } from "./Weather.actions";
 import { ISearchWeather } from "@/types/Weather.interface";
+import { IInitialStateWeatherSlice } from "@/types/InitialStateWeather.interface";
 
-interface IInitialStateWeatherSlice {
-    isLoading: boolean,
-    isSuccess: boolean,
-    error: SerializedError | null,
-    data: ISearchWeather[],
-}
-
-const initialState: IInitialStateWeatherSlice = {
+const initialState: IInitialStateWeatherSlice<ISearchWeather[]> = {
     isLoading: false,
     isSuccess: false,
     data: [],
@@ -17,7 +11,7 @@ const initialState: IInitialStateWeatherSlice = {
 }
 
 export const {reducer, actions} = createSlice({
-    name: 'weather',
+    name: 'weather/search',
     initialState,
     reducers: {},
     extraReducers: builder => {

@@ -11,3 +11,14 @@ export const fetchWeatherSearch = createAsyncThunk('fetch/weather/search', async
         return thunkApi.rejectWithValue(error)        
     }
 }) 
+
+export const fetchWeatherForecast = createAsyncThunk('fetch/weather/forecast', async (location: string, thunkApi) => {
+    try {
+        const respose = await ApiClient.getForecastWeather(location)
+        
+        return respose
+    } 
+    catch (error) {
+        return thunkApi.rejectWithValue(error)
+    }
+})
