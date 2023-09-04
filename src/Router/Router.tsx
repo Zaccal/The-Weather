@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout/Layout";
 import useTypedSelector from "@/hooks/useTypedSelector";
-import Home from "@/pages/Home/Home";
+import WeatherMenu from "@/pages/WeatherMenu/WeatherMenu";
 import SelectLocation from "@/pages/SelectLocation/SelectLocation";
 import { RouteObject, createBrowserRouter } from "react-router-dom";
 
@@ -8,7 +8,7 @@ const childrenRoutes: RouteObject[] = [
     {
         path: '/',
         index: true,
-        element:  <Home />, 
+        element:  <WeatherMenu />,
     },
     {
         path: '/Cites',
