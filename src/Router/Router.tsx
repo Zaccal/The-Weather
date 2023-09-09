@@ -1,7 +1,7 @@
 import Layout from '@/components/Layout/Layout'
 import useTypedSelector from '@/hooks/useTypedSelector'
-import WeatherMenu from '@/pages/WeatherMenu/WeatherMenu'
-import SelectLocation from '@/pages/SelectLocation/SelectLocation'
+import Dashboard from '@/pages/Dashboard/Dashboard'
+import Home from '@/pages/Home/Home'
 import { RouteObject, createBrowserRouter } from 'react-router-dom'
 import Error from '@/pages/Error/Error'
 
@@ -9,7 +9,7 @@ const childrenRoutes: RouteObject[] = [
   {
     path: '/',
     index: true,
-    element: <WeatherMenu />
+    element: <Dashboard />
   },
   {
     path: '/Cites',
@@ -29,9 +29,9 @@ export const router = createBrowserRouter([
   {
     path: '/',
     Component() {
-      const { location } = useTypedSelector((state) => state.settings)
+      const { location } = useTypedSelector(state => state.settings)
 
-      return location ? <Layout /> : <SelectLocation />
+      return location ? <Layout /> : <Home />
     },
     children: childrenRoutes
   }

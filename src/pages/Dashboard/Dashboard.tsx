@@ -5,7 +5,7 @@ import { useEffect } from 'react'
 import Error from '../Error/Error'
 import Spiner from '@/components/ui/Spiner'
 
-const WeatherMenu = () => {
+const Dashboard = () => {
   const { fetchWeatherForecast } = useActions()
   const { location } = useTypedSelector(state => state.settings)
   const { data, error, isLoading } = useTypedSelector(state => state.forecastWeatherData)
@@ -28,4 +28,4 @@ const WeatherMenu = () => {
   )
 }
 
-export default WeatherMenu
+export default Dashboard

@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button'
 import { Label } from '@/components/ui/label'
 import Error from '../Error/Error'
 
-const SelectLocation = () => {
+const Home = () => {
   const { fetchWeatherSearch, changeLocation } = useActions()
   const { data, isLoading, isSuccess, error } = useTypedSelector(state => state.searchedWeatherData)
   const [searchValue, setSearchValue] = useState('')
@@ -91,4 +91,4 @@ const SelectLocation = () => {
   )
 }
 
-export default SelectLocation
+export default Home
