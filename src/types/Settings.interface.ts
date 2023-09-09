@@ -1,5 +1,6 @@
-export type TypeTheme = "dark" | "light" | "system"
+export type TypeTheme = 'dark' | 'light' | 'system'
 
 export interface ISettings {
-    theme: TypeTheme,
-} 
+  theme: TypeTheme
+  location: string
+}

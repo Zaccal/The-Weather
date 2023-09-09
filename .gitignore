@@ -23,4 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 README.md
+<<<<<<< HEAD
 src/root.ts
+=======
+root.ts
+>>>>>>> bb8277a2c355f4b18b87b702ce6243300445f276
