@@ -17,7 +17,8 @@ module.exports = {
     },
     extend: {
       gridTemplateColumns: {
-        'sidebar/content': '87px, 3fr'
+        'sidebar/content': '87px, 3fr',
+        'content/bar': 'repeat(6, 1fr)' 
       },
       colors: {
         main: '#f9f9f9',
