@@ -2,14 +2,11 @@ import { Button } from '@/components/ui/button'
 import { SerializedError } from '@reduxjs/toolkit'
 import { useNavigate } from 'react-router-dom'
 
-const Error = ({
-  data = {
-    code: '404',
-    message: 'Not found'
-  }
-}: {
-  data?: SerializedError
-}) => {
+interface IErrorComponent {
+  data: SerializedError
+}
+
+const Error = ({ data }: IErrorComponent) => {
   const nav = useNavigate()
 
   return (
@@ -19,7 +16,9 @@ const Error = ({
           <div className="flex flex-col-reverse gap-5">
             <div>
               <div className="">
-                <h1 className="my-2 text-gray-800 font-bold text-2xl dark:text-white">{data.message}</h1>
+                <h1 className="my-2 text-gray-800 font-bold text-2xl dark:text-white">
+                  {data ? data.message : 'Not found'}
+                </h1>
                 <p className="my-2 text-gray-800 dark:text-white">
                   Sorry about that! Please visit our hompage to get where you need to go.
                 </p>
@@ -29,7 +28,7 @@ const Error = ({
               </div>
             </div>
             <div>
-              <h1 className="sm:text-9xl text-5xl font-bold">{data.code}</h1>
+              <h1 className="sm:text-9xl text-5xl font-bold">{data ? data.code : '404'}</h1>
             </div>
           </div>
         </div>

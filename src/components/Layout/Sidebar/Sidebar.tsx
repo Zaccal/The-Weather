@@ -9,7 +9,7 @@ import SettingsSheetContent from './SettingsSheetContent/SettingsSheetContent'
 const Sidebar = () => {
   return (
     <Sheet>
-      <div className="dark:bg-mainDark bg-white shadow-lg w-full h-full rounded-lg px-3 py-3">
+      <div className="bg-muted shadow-lg w-full h-full rounded-lg px-3 py-3">
         <Logo className="mb-10">
           <Cloud />
         </Logo>

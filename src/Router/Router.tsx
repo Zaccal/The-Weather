@@ -33,6 +33,7 @@ export const router = createBrowserRouter([
 
       return location ? <Layout /> : <Home />
     },
-    children: childrenRoutes
+    children: childrenRoutes,
+    errorElement: <Error />
   }
 ])

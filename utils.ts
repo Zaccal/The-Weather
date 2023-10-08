@@ -1,6 +1,7 @@
 import { ApiClient } from '@/api/WeatherApi/ApiClient'
 import { SerializedError, createAsyncThunk } from '@reduxjs/toolkit'
 import { isSerlizeError } from '@/utils/utils'
+import { log } from 'console'
 
 export const fetchWeatherSearch = createAsyncThunk('fetch/weather/search', async (searchLocation: string, thunkApi) => {
   try {
@@ -8,6 +9,7 @@ export const fetchWeatherSearch = createAsyncThunk('fetch/weather/search', async
 
     return respose
   } catch (error) {
+    log()
     return thunkApi.rejectWithValue(error)
   }
 })
